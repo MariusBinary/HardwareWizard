@@ -1,0 +1,96 @@
+﻿<Window x:Class="HardwareWizard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:HardwareWizard.Controls"
+        xmlns:helpers="clr-namespace:HardwareWizard.Helpers"
+        mc:Ignorable="d"
+        Background="{DynamicResource BackgroundColor}"
+        Title="Hardware Wizard" Height="825" Width="1465" MinHeight="560" MinWidth="1000" 
+        Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static NavigationCommands.BrowseBack}" Executed="NavigateBack"/>
+        <CommandBinding Command="{x:Static NavigationCommands.BrowseForward}" Executed="NavigateForward"/>
+        <CommandBinding Command="{x:Static helpers:ViewCommands.BrowseTo}" Executed="Navigate"/>
+    </Window.CommandBindings>
+    <Grid x:Name="Tab_Main">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Navigation Bar-->
+        <Border Grid.Column="0" Background="{DynamicResource NavigationBackgroundColor}" BorderBrush="{DynamicResource NavigationBorderColor}" BorderThickness="0,0,0,0" Panel.ZIndex="99">
+            <Grid>
+                <StackPanel Orientation="Vertical" Margin="0,8,0,0">
+                    <TextBlock HorizontalAlignment="Left" FontSize="12.5" Text="General" Foreground="{StaticResource NavigationGroupTextColor}" Margin="10,10" FontFamily="/HardwareWizard;component/Fonts/#Inter Semi Bold"/>
+                    <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Dashboard" Height="46" Margin="0,0,0,5" Click="Navigate">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image x:Name="Img_Dashboard" Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Dashboard.Desktop}"/>
+                            <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Dashboard" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <TextBlock HorizontalAlignment="Left" FontSize="12.5" Text="Hardware" FontFamily="/HardwareWizard;component/Fonts/#Inter Semi Bold" Foreground="{StaticResource NavigationGroupTextColor}" Margin="10,10"/>
+                    <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Motherboard" Height="46" Margin="0,0,0,5" Click="Navigate">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Motherboard}"/>
+                            <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Motherboard" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Processor" Height="46" Margin="0,0,0,5" Click="Navigate">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Processor}"/>
+                            <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Processor" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Memory" Height="46" Margin="0,0,0,5" Click="Navigate">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Memory}"/>
+                            <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Memory" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Graphics" Height="46" Margin="0,0,0,5" Click="Navigate">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Graphics}"/>
+                            <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Graphics" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Storage" Height="46" Margin="0,0,0,5" Click="Navigate">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Storage}"/>
+                            <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Storage" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Cooling" Height="46" Margin="0,0,0,5" Click="Navigate">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Cooling}"/>
+                            <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Cooling" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </RadioButton>
+                </StackPanel>
+                <RadioButton GroupName="Navigation" Style="{StaticResource FlatRadioButton}" BorderThickness="0" x:Name="Btn_Settings" Height="46"  Margin="0,0,0,5" VerticalAlignment="Bottom" Click="Navigate">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Image Width="26" Height="26" Source="{DynamicResource Image.NavigationBar.Settings}"/>
+                        <TextBlock Foreground="{DynamicResource Button.NavigationBar.Foreground}" Text="Settings" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </RadioButton>
+            </Grid>
+        </Border>
+
+        <!--Views Content-->
+        <ScrollViewer x:Name="Scroll_Container" CanContentScroll="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Column="1">
+            <controls:AnimatedContentControl x:Name="Tab_Container" MaxWidth="1300" Margin="30,40"/>
+        </ScrollViewer>
+
+        <!--Loading Tab-->
+        <Grid x:Name="Tab_Loading" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource BackgroundColor}" Panel.ZIndex="999" d:IsHidden="True">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="Images/Shared/ic_logo.png" Width="256" Height="256" Margin="0,0,0,16"/>
+                <TextBlock Foreground="{DynamicResource PrimaryTextColor}" Text="Hardware Wizard" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Margin="0,0,0,42" FontFamily="/HardwareWizard;component/Fonts/#Inter Extra Bold"/>
+                <ProgressBar BorderThickness="0" Height="16" HorizontalAlignment="Center" Width="324" Margin="0,0,0,16" IsIndeterminate="True" Foreground="#FF999CA3"/>
+                <TextBlock Foreground="{DynamicResource SecondaryTextColor}" Text="Retrieving Information" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

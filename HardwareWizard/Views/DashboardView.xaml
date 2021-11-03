@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="HardwareWizard.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:HardwareWizard.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <!--Page Header-->
+        <Grid Height="220">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Header Image-->
+            <controls:ChassisControl x:Name="chassisControl"/>
+            <!--Header Details-->
+            <StackPanel Grid.Column="2" Margin="0,30">
+                <TextBlock x:Name="Tx_ComputerName" HorizontalAlignment="Left" Foreground="{DynamicResource PrimaryTextColor}" FontSize="28" Text="-" FontFamily="/HardwareWizard;component/Fonts/#Inter Extra Bold"/>
+                <TextBlock x:Name="Tx_ComputerVersion" Foreground="{DynamicResource SecondaryTextColor}" HorizontalAlignment="Left" FontSize="16"  Text="-"/>
+                <Grid Margin="0,15,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="35"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" Text="OS Edition"/>
+                            <TextBlock x:Name="Tx_ComputerEdition"  HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="OS Build"/>
+                            <TextBlock x:Name="Tx_ComputerBuild" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Architecture"/>
+                            <TextBlock x:Name="Tx_ComputerArchitecture" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Product ID"/>
+                            <TextBlock x:Name="Tx_ComputerProductID" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Install Date"/>
+                            <TextBlock x:Name="Tx_ComputerInstallDate" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                    </StackPanel>
+                    <Border Grid.Column="1" Width="1" HorizontalAlignment="Center" Background="{StaticResource SecondaryTextColor}"/>
+                    <StackPanel Grid.Column="2">
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Identifier"/>
+                            <TextBlock x:Name="Tx_ComputerIdentifier" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Processor"/>
+                            <TextBlock x:Name="Tx_ComputerProcessor" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Graphics"/>
+                            <TextBlock x:Name="Tx_ComputerGraphics" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel Margin="0,0,0,2">
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Memory"/>
+                            <TextBlock x:Name="Tx_ComputerMemory" HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Margin="0,0,10,0" HorizontalAlignment="Left" Text="Storage"/>
+                            <TextBlock x:Name="Tx_ComputerStorage"  HorizontalAlignment="Right" Foreground="{StaticResource SecondaryTextColor}" FontSize="12" Text="N/A"/>
+                        </DockPanel>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Grid>
+        <Border Height="1" Background="{DynamicResource SplitterColor}"/>
+        <!--Page Content-->
+        <controls:ResponsiveGridPanel x:Name="Panel_Controls" Margin="0,10,0,0" Columns="3" Gap="10" HeightBasedAssegnation="True"/>
+    </StackPanel>
+</UserControl>

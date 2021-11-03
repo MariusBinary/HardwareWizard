@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C7DE2F7-AF40-42A0-8F1D-A0165F6B7792}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HardwareWizard</RootNamespace>
+    <AssemblyName>HardwareWizard</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OpenHardwareMonitorLib">
+      <HintPath>..\..\..\..\Desktop\Sensei\openhardwaremonitor-master\openhardwaremonitor-master\Bin\Debug\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controls\AnimatedContentControl.cs" />
+    <Compile Include="Controls\ChassisControl.cs" />
+    <Compile Include="Controls\DashboardGpuControl.cs" />
+    <Compile Include="Controls\DashboardRamControl.cs" />
+    <Compile Include="Controls\DashboardStorageControl.cs" />
+    <Compile Include="Controls\DetailedProgressControl.cs" />
+    <Compile Include="Controls\CircularProgressControl.cs" />
+    <Compile Include="Controls\DashboardCpuControl.cs" />
+    <Compile Include="Controls\DetailsTableControl.cs" />
+    <Compile Include="Controls\ResponsiveGridItem.cs" />
+    <Compile Include="Controls\GraphsGridPanel.cs" />
+    <Compile Include="Controls\GenericItemControl.cs" />
+    <Compile Include="Controls\CoolingThermalControl.cs" />
+    <Compile Include="Controls\CoolingFanControl.cs" />
+    <Compile Include="Controls\GraphControl.cs" />
+    <Compile Include="Controls\CircularProgressShape.cs" />
+    <Compile Include="Controls\ResponsiveGridPanel.cs" />
+    <Compile Include="Converters\ArrayMultiValueConverter.cs" />
+    <Compile Include="Converters\BorderClipConverter.cs" />
+    <Compile Include="Converters\DimensionConverter.cs" />
+    <Compile Include="Converters\DoubleToTextConverter.cs" />
+    <Compile Include="Core\ComputerData.cs" />
+    <Compile Include="Core\CoolingThermalGroup.cs" />
+    <Compile Include="Core\Helpers\ReportHelper.cs" />
+    <Compile Include="Core\Helpers\ProcessComparer.cs" />
+    <Compile Include="Core\Helpers\WMICollection.cs" />
+    <Compile Include="Core\Helpers\WMIHelper.cs" />
+    <Compile Include="Core\Helpers\WallpaperHelper.cs" />
+    <Compile Include="Core\Helpers\TemperatureHelper.cs" />
+    <Compile Include="Core\Helpers\ThreadTimer.cs" />
+    <Compile Include="Core\ProcessesWatcherData.cs" />
+    <Compile Include="Core\ProcessesWatcher.cs" />
+    <Compile Include="Core\Helpers\GraphCollection.cs" />
+    <Compile Include="Core\CoolingThermalData.cs" />
+    <Compile Include="Core\HardwareWatcher.cs" />
+    <Compile Include="Core\CoolingData.cs" />
+    <Compile Include="Core\CoolingFanData.cs" />
+    <Compile Include="Core\GraphicsCardData.cs" />
+    <Compile Include="Core\GraphicsData.cs" />
+    <Compile Include="Core\GraphicsMonitorData.cs" />
+    <Compile Include="Core\MemoryBankData.cs" />
+    <Compile Include="Core\MemoryData.cs" />
+    <Compile Include="Core\MotherboardData.cs" />
+    <Compile Include="Core\ProcessorData.cs" />
+    <Compile Include="Core\StorageData.cs" />
+    <Compile Include="Core\StorageDriveData.cs" />
+    <Compile Include="Core\StoragePartitionData.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Helpers\ViewCommands.cs" />
+    <Compile Include="Interfaces\IProcessData.cs" />
+    <Compile Include="Interfaces\ITemperature.cs" />
+    <Compile Include="Interfaces\IPanelUpdate.cs" />
+    <Compile Include="Interfaces\IDataUpdate.cs" />
+    <Compile Include="Interfaces\IViewUpdate.cs" />
+    <Compile Include="Models\StoragePartitionModel.cs" />
+    <Compile Include="Models\DetailsTableItemModel.cs" />
+    <Compile Include="Models\DashboardDriveItemModel.cs" />
+    <Compile Include="Models\LegendItemModel.cs" />
+    <Compile Include="Models\ProcessItemModel.cs" />
+    <Compile Include="Views\MemoryBankView.xaml.cs">
+      <DependentUpon>MemoryBankView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GraphicsMonitorView.xaml.cs">
+      <DependentUpon>GraphicsMonitorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GraphicsCardView.xaml.cs">
+      <DependentUpon>GraphicsCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProcessorView.xaml.cs">
+      <DependentUpon>ProcessorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CoolingView.xaml.cs">
+      <DependentUpon>CoolingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MemoryView.xaml.cs">
+      <DependentUpon>MemoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MotherboardView.xaml.cs">
+      <DependentUpon>MotherboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StorageDriveView.xaml.cs">
+      <DependentUpon>StorageDriveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GraphicsView.xaml.cs">
+      <DependentUpon>GraphicsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StorageView.xaml.cs">
+      <DependentUpon>StorageView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\DarkTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\SharedTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\LightTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MemoryBankView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GraphicsMonitorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GraphicsCardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProcessorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DashboardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CoolingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MemoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MotherboardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StorageDriveView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GraphicsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StorageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\Inter-ExtraBold.otf" />
+    <Resource Include="Fonts\Inter-Medium.otf" />
+    <Resource Include="Fonts\Inter-SemiBold.otf" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dark\ic_cooling.png" />
+    <Resource Include="Images\Dark\ic_cpu.png" />
+    <Resource Include="Images\Dark\ic_dashboard_desktop.png" />
+    <Resource Include="Images\Dark\ic_gpu.png" />
+    <Resource Include="Images\Dark\ic_memory.png" />
+    <Resource Include="Images\Dark\ic_motherboard.png" />
+    <Resource Include="Images\Dark\ic_settings.png" />
+    <Resource Include="Images\Dark\ic_storage.png" />
+    <Resource Include="Images\Light\ic_cooling.png" />
+    <Resource Include="Images\Light\ic_cpu.png" />
+    <Resource Include="Images\Light\ic_dashboard_desktop.png" />
+    <Resource Include="Images\Light\ic_fan_blades.png" />
+    <Resource Include="Images\Light\ic_fan_case.png" />
+    <Resource Include="Images\Light\ic_gpu.png" />
+    <Resource Include="Images\Light\ic_memory.png" />
+    <Resource Include="Images\Light\ic_motherboard.png" />
+    <Resource Include="Images\Light\ic_settings.png" />
+    <Resource Include="Images\Light\ic_storage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_desktop.png" />
+    <Resource Include="Images\Shared\ic_laptop.png" />
+    <Resource Include="Images\Shared\ic_ram_slot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dark\ic_fan_blades.png" />
+    <Resource Include="Images\Dark\ic_fan_case.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dark\ic_default_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_motherboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_cpu_amd.png" />
+    <Resource Include="Images\Shared\ic_cpu_amd_small.png" />
+    <Resource Include="Images\Shared\ic_cpu_intel.png" />
+    <Resource Include="Images\Shared\ic_cpu_intel_small.png" />
+    <Resource Include="Images\Shared\ic_gpu_amd.png" />
+    <Resource Include="Images\Shared\ic_gpu_amd_small.png" />
+    <Resource Include="Images\Shared\ic_gpu_intel.png" />
+    <Resource Include="Images\Shared\ic_gpu_intel_small.png" />
+    <Resource Include="Images\Shared\ic_gpu_nvidia.png" />
+    <Resource Include="Images\Shared\ic_gpu_nvidia_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_ram_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_drive_external.png" />
+    <Resource Include="Images\Shared\ic_drive_external_small.png" />
+    <Resource Include="Images\Shared\ic_drive_internal.png" />
+    <Resource Include="Images\Shared\ic_drive_internal_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_partition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_gpu_unknown.png" />
+    <Resource Include="Images\Shared\ic_gpu_unknown_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Shared\ic_cpu_unknown.png" />
+    <Resource Include="Images\Shared\ic_cpu_unknown_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dark\ic_dashboard_laptop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Light\ic_dashboard_laptop.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

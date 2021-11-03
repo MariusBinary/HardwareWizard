@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="HardwareWizard.Views.GraphicsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:HardwareWizard.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <!--Title-->
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="28" Margin="0,8" Text="Graphics"/>
+        <!--Cards-->
+        <Border Height="1" HorizontalAlignment="Stretch" Background="{DynamicResource SplitterColor}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8" Text="Cards"/>
+        <controls:ResponsiveGridPanel x:Name="Panel_Cards" Margin="0,0,0,10" Columns="5" Gap="10"/>
+        <!--Monitors-->
+        <Border Height="1" HorizontalAlignment="Stretch" Background="{DynamicResource SplitterColor}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8" Text="Monitors"/>
+        <controls:ResponsiveGridPanel x:Name="Panel_Monitors" Margin="0,0,0,10" Columns="5" Gap="10"/>
+    </StackPanel>
+</UserControl>

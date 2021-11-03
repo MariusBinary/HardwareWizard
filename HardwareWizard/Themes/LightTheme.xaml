@@ -1,0 +1,90 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Shadows-->
+    <DropShadowEffect x:Key="z-depth1" BlurRadius="5" ShadowDepth="1" Direction="270" Color="#FF17181A"/>
+    <DropShadowEffect x:Key="z-depth2" BlurRadius="8" ShadowDepth="2.5" Direction="270" Color="#FF17181A"/>
+    <DropShadowEffect x:Key="z-depth3" BlurRadius="14" ShadowDepth="4.5" Direction="270" Color="#FF17181A"/>
+    <DropShadowEffect x:Key="z-depth4" BlurRadius="25" ShadowDepth="8" Direction="270" Color="#FF17181A"/>
+    <DropShadowEffect x:Key="z-depth5" BlurRadius="35" ShadowDepth="13" Direction="270" Color="#FF17181A"/>
+
+    <!--Colors-->
+    <SolidColorBrush x:Key="App.Light.Background" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="App.Light.Foreground" Color="#FFC4C4C4" />
+    <SolidColorBrush x:Key="Item.Background" Color="Transparent" />
+    <SolidColorBrush x:Key="Item.Border" Color="Transparent" />
+    <SolidColorBrush x:Key="Item.MouseOver.Background" Color="Transparent"/>
+    <SolidColorBrush x:Key="Item.MouseOver.Border" Color="#FF26A0DA"/>
+    <SolidColorBrush x:Key="Item.SelectedInactive.Background" Color="#3DDADADA"/>
+    <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="#FFDADADA"/>
+    <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="#3D26A0DA"/>
+    <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="#FF26A0DA"/>
+    <SolidColorBrush x:Key="ProgressBar.Progress" Color="#FF06B025"/>
+    <SolidColorBrush x:Key="ProgressBar.Background" Color="#FFE6E6E6"/>
+    <SolidColorBrush x:Key="ProgressBar.Border" Color="#FFBCBCBC"/>
+    <SolidColorBrush x:Key="App.NavigationBar.Background" Color="#FFE4E4E4"/>
+    <SolidColorBrush x:Key="App.NavigationBar.Section.Background" Color="#FFE6E6E6"/>
+    <Color x:Key="ControlForeground">#181818</Color>
+    <Color x:Key="ControlReadOnlyForeground">#383838</Color>
+    <Color x:Key="ControlDisabledForeground">#686868</Color>
+    <Color x:Key="ControlBackground">#f7f7f9</Color>
+    <Color x:Key="ControlHoveredBackground">#fafafc</Color>
+    <Color x:Key="ControlFocusedBackground">#fdfdff</Color>
+    <Color x:Key="ControlReadOnlyBackground">#f2f2f4</Color>
+    <Color x:Key="ControlDisabledBackground">#efeff2</Color>
+    <Color x:Key="ControlBorder">#383838</Color>
+    <Color x:Key="ControlHoveredBorder">#0BBAE0</Color>
+    <Color x:Key="ControlFocusedBorder">#000000</Color>
+    <Color x:Key="ControlReadOnlyBorder">#484848</Color>
+    <Color x:Key="ControlDisabledBorder">#787878</Color>
+
+    <SolidColorBrush x:Key="PrimaryTextColor" Color="#232425"/>
+    <SolidColorBrush x:Key="SecondaryTextColor" Color="#3A3B3C"/>
+    <SolidColorBrush x:Key="SplitterColor" Color="#EBE9EB"/>
+    <SolidColorBrush x:Key="ControlBackgroundColor" Color="#F2F3F4"/>
+    <SolidColorBrush x:Key="ControlSplitterColor" Color="#A8A8A9"/>
+    <SolidColorBrush x:Key="BackgroundColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="NavigationBackgroundColor" Color="#EEECEE"/>
+    <SolidColorBrush x:Key="NavigationBorderColor" Color="#DDDCDE"/>
+    <SolidColorBrush x:Key="NavigationGroupTextColor" Color="#B7B6B7"/>
+    
+    <!--Graph Control-->
+    <SolidColorBrush x:Key="Control.Graph.Background" Color="#C7C4C9"/>
+    <SolidColorBrush x:Key="Control.Graph.Stroke" Color="#F2F3F4"/>
+    
+    <!--Detailed Progress Control-->
+    <SolidColorBrush x:Key="Control.DetailedProgress.Background" Color="#D8D8E0"/>
+    <SolidColorBrush x:Key="Control.DetailsTable.Background" Color="#F2F3F4"/>
+    <SolidColorBrush x:Key="Control.DetailsTable.Border" Color="#A39FA6"/>
+    
+    <!--NavigationButton-->
+    <SolidColorBrush x:Key="Button.NavigationBar.Background" Color="Transparent" />
+    <SolidColorBrush x:Key="Button.NavigationBar.Foreground" Color="#363436" />
+    <SolidColorBrush x:Key="Button.NavigationBar.MouseOver" Color="#F7F7F7" />
+    <SolidColorBrush x:Key="Button.NavigationBar.Checked" Color="#CDCBCD" />
+
+    <SolidColorBrush x:Key="Button.Model.Background" Color="#F2F3F4"/>
+    <SolidColorBrush x:Key="Button.Model.MouseOver" Color="#FFD7D7D7"/>
+    
+    <!--ListViewItem-->
+    <SolidColorBrush x:Key="ListViewItem.MouseOver" Color="#0C000000" />
+    <SolidColorBrush x:Key="ScrollBar.Background" Color="#F2F3F4" />
+
+    <SolidColorBrush x:Key="ComboBox.Background" Color="#FDFEFF" />
+    <SolidColorBrush x:Key="ComboBox.Border" Color="#DEDFE0" />
+    
+    <!--NaivgationBar Images-->
+    <BitmapImage x:Key="Image.NavigationBar.Dashboard.Desktop" UriSource="/HardwareWizard;component/Images/Light/ic_dashboard_desktop.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Dashboard.Laptop" UriSource="/HardwareWizard;component/Images/Light/ic_dashboard_laptop.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Motherboard" UriSource="/HardwareWizard;component/Images/Light/ic_motherboard.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Processor" UriSource="/HardwareWizard;component/Images/Light/ic_cpu.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Memory" UriSource="/HardwareWizard;component/Images/Light/ic_memory.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Graphics" UriSource="/HardwareWizard;component/Images/Light/ic_gpu.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Storage" UriSource="/HardwareWizard;component/Images/Light/ic_storage.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Cooling" UriSource="/HardwareWizard;component/Images/Light/ic_cooling.png" />
+    <BitmapImage x:Key="Image.NavigationBar.Settings" UriSource="/HardwareWizard;component/Images/Light/ic_settings.png" />
+    
+    <!--Fan Control Images-->
+    <BitmapImage x:Key="Image.FanControl.Case" UriSource="/HardwareWizard;component/Images/Light/ic_fan_case.png" />
+    <BitmapImage x:Key="Image.FanControl.Blades" UriSource="/HardwareWizard;component/Images/Light/ic_fan_blades.png" />
+</ResourceDictionary>

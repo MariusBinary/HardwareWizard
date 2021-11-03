@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="HardwareWizard.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignWidth="800">
+    <StackPanel>
+        <!--Title-->
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="28" Margin="0,8" Text="Settings"/>
+        <!--General-->
+        <Border Height="1" HorizontalAlignment="Stretch" Background="{DynamicResource SplitterColor}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8" Text="General"/>
+        <StackPanel Grid.Row="3" Margin="0,0,0,10">
+            <Border CornerRadius="8" Height="40" Background="{DynamicResource ControlBackgroundColor}">
+                <Grid Margin="10,0">
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource SecondaryTextColor}" FontSize="14" Text="Update period" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="CBox_UpdatePeriod" HorizontalAlignment="Right" Width="180" VerticalAlignment="Center" SelectedIndex="0" SelectionChanged="CBox_UpdatePeriod_SelectionChanged">
+                        <ComboBoxItem Content="1s"/>
+                        <ComboBoxItem Content="2s"/>
+                        <ComboBoxItem Content="5s"/>
+                    </ComboBox>
+                </Grid>
+            </Border>
+            <Border CornerRadius="8" Height="40" Background="{DynamicResource ControlBackgroundColor}" Margin="0,5,0,0">
+                <Grid Margin="10,0">
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource SecondaryTextColor}" FontSize="14" Text="Keep all values updated in the background." VerticalAlignment="Center"/>
+                    <CheckBox x:Name="Sw_CanBackgroundUpdate" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Sw_CanBackgroundUpdate_Click"/>
+                </Grid>
+            </Border>
+            <Border CornerRadius="8" Height="40" Background="{DynamicResource ControlBackgroundColor}" Margin="0,5,0,0">
+                <Grid Margin="10,0">
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource SecondaryTextColor}" FontSize="14" Text="Temperature Unit" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="CBox_TemperatureUnit" HorizontalAlignment="Right" Width="180" VerticalAlignment="Center" SelectionChanged="CBox_TemperatureUnit_SelectionChanged">
+                        <ComboBoxItem Content="Celsius"/>
+                        <ComboBoxItem Content="Farenight"/>
+                        <ComboBoxItem Content="Kelvin"/>
+                    </ComboBox>
+                </Grid>
+            </Border>
+            <Border CornerRadius="8" Height="40" Background="{DynamicResource ControlBackgroundColor}" Margin="0,5,0,0">
+                <Grid Margin="10,0">
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource SecondaryTextColor}" FontSize="14" Text="Welcome page" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="CBox_WelcomePage" HorizontalAlignment="Right" Width="180" VerticalAlignment="Center" SelectionChanged="CBox_WelcomePage_SelectionChanged">
+                        <ComboBoxItem Content="Dashboard"/>
+                        <ComboBoxItem Content="Motherboard"/>
+                        <ComboBoxItem Content="Processor"/>
+                        <ComboBoxItem Content="Memory"/>
+                        <ComboBoxItem Content="Graphics"/>
+                        <ComboBoxItem Content="Storage"/>
+                        <ComboBoxItem Content="Cooling"/>
+                    </ComboBox>
+                </Grid>
+            </Border>
+        </StackPanel>
+        <!--Storage-->
+        <Border Height="1" HorizontalAlignment="Stretch" Background="{DynamicResource SplitterColor}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8" Text="Storage"/>
+        <StackPanel Grid.Row="6" Margin="0,0,0,10">
+            <Border CornerRadius="8" Height="40" Background="{DynamicResource ControlBackgroundColor}" Margin="0,5,0,0">
+                <Grid Margin="10,0">
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource SecondaryTextColor}" FontSize="14" Text="Update when used disk space changes." VerticalAlignment="Center"/>
+                    <CheckBox x:Name="Sw_UpdateDiskSpace" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Sw_UpdateDiskSpace_Click"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+        <!--Theme-->
+        <Border Height="1" HorizontalAlignment="Stretch" Background="{DynamicResource SplitterColor}"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8" Text="Theme"/>
+        <StackPanel Grid.Row="12" Margin="0,0,0,10">
+            <Border CornerRadius="8" Height="40" Background="{DynamicResource ControlBackgroundColor}">
+                <Grid Margin="10,0">
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource SecondaryTextColor}" FontSize="14" Text="Theme" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="CBox_Theme" HorizontalAlignment="Right" Width="180" VerticalAlignment="Center" SelectionChanged="CBox_Theme_SelectionChanged">
+                        <ComboBoxItem Content="Light mode"/>
+                        <ComboBoxItem Content="Dark mode"/>
+                    </ComboBox>
+                </Grid>
+            </Border>
+            <Border CornerRadius="8" Height="40" Background="{DynamicResource ControlBackgroundColor}" Margin="0,5,0,0">
+                <Grid Margin="10,0">
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource SecondaryTextColor}" FontSize="14" Text="Enable page transition animation" VerticalAlignment="Center"/>
+                    <CheckBox x:Name="Sw_AllowTransitionAnimation" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Sw_AllowTransitionAnimation_Click"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
