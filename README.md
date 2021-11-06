@@ -1,5 +1,5 @@
 # Hardware Wizard
-Hardware Wizard is a software that collects information about the hardware of your device and monitors some parameters such as the temperature.
+Hardware Wizard is a software that monitors temperature sensors and fans speed of a computer. In addition to this it is also able to provide a lot of useful information on your peripherals...all this with a modern and intuitive interface.
 
 ## Get a general overview on your pc, with information that updates in real time.
 <img src="https://www.mariusbinary.altervista.org/assets/hardware_wizard/docs/prev1.png" />
