@@ -14,9 +14,9 @@ Hardware Wizard is a software that collects information about the hardware of yo
 
 ## What peripherals are supported?
 Hardware Wizard can provide the following information on:
-- **Motherboard**: specifications.
+- **Motherboard**: attached fans speed, temperature, specifications.
 - **Processor**: load (system, user), temperature, top processes that use more cpu, specifications.
-- **Memory**: usage (hardware reserved, in use, modified, standby, available), top processes that use more memory, specifications.
+- **Memory**: usage (hardware reserved, in use, modified, standby, available), top processes that use more ram, specifications.
 - **Graphic Cards**: load, temperature, fans speed, memory usage, specifications.
 - **Monitors**: specifications.
 - **Storage Devices**: storage (used, available), partitions, temperature, specifications.
@@ -29,7 +29,7 @@ Hardware Wizard can provide the following information on:
 - Choose which page to open first when the application starts.
 
 ## Dependencies
-Hardware Wizard depends on the **OpenHardwareMonitor (v0.9.5)** library (https://openhardwaremonitor.org/) which is used exclusively to retrieve sensor data and fan speeds in real time. All the other information (eg. peripherals details, cpu load, ram usage, main processes, storage partitions, ecc...) is obtained directly from the operating system without the use of any external liberaries.
+Hardware Wizard depends on the **OpenHardwareMonitor (v0.9.5)** library (https://openhardwaremonitor.org/) which is used exclusively to retrieve temperature sensors data and fans speed in real time. All the other information (eg. peripherals details, cpu load, ram usage, main processes, storage partitions, ecc...) is obtained directly from the operating system without the use of any external liberaries.
 
 ## For help or questions about the program:
 Contact me at: mcelcovan@gmail.com
