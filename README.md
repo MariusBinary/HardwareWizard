@@ -29,7 +29,7 @@ Hardware Wizard can provide the following information on:
 - Choose which page to open first when the application starts.
 
 ## Dependencies
-Hardware Wizard depends on the OpenHardwareWizard (v0.9.5) library (https://openhardwaremonitor.org/) which is used exclusively to retrieve sensor data and fan speeds in real time. All the other information (eg. peripherals details, cpu load, ram usage, main processes, storage partitions, ecc...) is obtained directly from the operating system without the use of any external liberaries.
+Hardware Wizard depends on the **OpenHardwareMonitor (v0.9.5)** library (https://openhardwaremonitor.org/) which is used exclusively to retrieve sensor data and fan speeds in real time. All the other information (eg. peripherals details, cpu load, ram usage, main processes, storage partitions, ecc...) is obtained directly from the operating system without the use of any external liberaries.
 
 ## For help or questions about the program:
 Contact me at: mcelcovan@gmail.com
